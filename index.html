@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Nani!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="birthday-card">
+            <h1 class="birthday-message">Happy 75th birthday Nani!</h1>
+            <div class="button-container">
+                <button id="surpriseBtn" class="surprise-button">reveal for surprise</button>
+            </div>
+            <div id="hiddenMessage" class="hidden-message">
+                <p>your real card is behind the washer</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('surpriseBtn').addEventListener('click', function() {
+            const hiddenMessage = document.getElementById('hiddenMessage');
+            hiddenMessage.style.display = 'block';
+            this.style.display = 'none';
+        });
+    </script>
+</body>
+</html>
